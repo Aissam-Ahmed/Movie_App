@@ -1,16 +1,38 @@
-# my_app
+# 🎬 Flutter Movie App
 
-A new Flutter project.
+A simple Flutter app that integrates with the TMDB API to display popular movies, search for movies, and let users save favorites locally.
 
-## Getting Started
+## 📱 Features
+- ✅ Fetch and display trending/popular movies.  
+- ✅ Search movies by title.  
+- ✅ Add/remove movies to/from local favorites.  
+- ✅ Favorites persist using `SharedPreferences`.  
+- ✅ Beautiful card UI with large movie posters.  
+- ✅ User-friendly error handling with retry options.
 
-This project is a starting point for a Flutter application.
+## ⚙️ Technologies
+- **Flutter** & **Dart**  
+- **TMDB API v3**  
+- **http** package for REST API calls  
+- **SharedPreferences** for local storage  
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Getting Started
+1. Install dependencies:  
+   ```bash
+   flutter pub get
+   
+Add your TMDB API token:
+Open lib/services/api_service.dart and replace the placeholder:
+static const String _token = 'YOUR_TOKEN_HERE';
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+Run the app:
+   flutter run
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+🧩 Project Structure
+Copy
+lib/
+ ├── main.dart               # Main app & screens (Movies, Favorites, Search)
+ ├── models/
+ │   └── movie.dart          # Movie data model
+ └── services/
+     └── api_service.dart    # TMDB API integration with your token
